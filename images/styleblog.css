@@ -1,0 +1,164 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('notebook.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header h1 span.pink {
+    color: #af7db2;
+    font-size: 3rem;
+    text-shadow: none;
+}
+
+header p.meta {
+    font-size: 1rem;
+    color: #777;
+}
+
+article {
+    font-size: 1.3rem;
+    line-height: 2.5;
+    margin-right: 10rem;
+    margin-left: 15.5rem;
+    color: #1b1b1b;
+}
+
+img {
+    border: 10px solid transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    height: 400px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+img:hover {
+    box-shadow:
+        0 0 5px rgba(245, 245, 220, 0.8),
+        0 0 10px rgba(204, 132, 132, 0.6),
+        0 0 15px rgba(0, 0, 0, 0.4);
+        border-radius: 15px;
+}
+
+header,
+main {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer {
+    margin-top: auto;
+    background-color: #474747;
+    color: #fff;
+    padding: 2px;
+    text-align: center;
+    justify-content: center;
+}
+
+.footer span {
+    color: #cb4ed1;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.navigation-buttons a {
+    padding: 4px 15px;
+    background-color:#cb4ed1;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    gap: 2rem;
+    transition: background-color 0.3s ease, opacity 0.5s ease;
+}
+
+.navigation-buttons a:hover {
+    background-color: #882191;
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 951px) {
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-size: contain;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    article {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    body {
+        background-size: auto;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    article {
+        font-size: 1rem;
+        margin: 0.2rem;
+        margin-left: -8rem;
+        margin-right: -8rem;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin: 0.5rem 0;
+    }
+
+    .button {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .navigation-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation-buttons a {
+        margin-bottom: 10px;
+    }
+
+}
+
+

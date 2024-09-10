@@ -1,0 +1,127 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f8f8f8, #e6e6e6);
+    background-image: url('images/fav.jpg');
+    background-size: cover;
+    animation: animateBackground 60s linear infinite;
+}
+
+@keyframes animateBackground {
+    0% {
+        background-position: center top;
+    }
+    50% {
+        background-position: center bottom;
+    }
+    100% {
+        background-position: center top;
+    }
+}
+
+.home-button {
+    position: fixed;
+    top: 35px;
+    left: 20px;
+    font-size: 20px;
+    color: #cb4ed1;
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+.home-button:hover {
+    transform: scale(1.15);
+}
+
+.home-button a {
+    text-decoration: none;
+    color: #cb4ed1;
+}
+
+.home-button i {
+    margin-right: 1px;
+}
+
+.container {
+    text-align: center;
+    max-width: 80%;
+    margin: 30px auto;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.heading {
+    background-color: #cb4ed1;
+    color: white;
+    padding: 12px;
+    margin: 0;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+#book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+.book {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.book:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
+}
+
+.book img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.book h3 {
+    padding: 8px 5px;
+    margin: 0;
+    font-size: 14px;
+}
+
+.book p {
+    padding: 0 5px 8px;
+    margin: 0;
+    font-size: 12px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(to bottom, #cb4ed1, #a61b9b);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #a61b9b, #81147a);
+}
